@@ -19,6 +19,7 @@ class Meeting(models.Model):
     start_time = models.TimeField(default=time(9))
     duration = models.IntegerField(default=1)
     room = models.ForeignKey(Room, on_delete=models.CASCADE)
+    detail = models.CharField(max_length=100, default="Provide meeting details...")
 
     def __str__(self):
         return f"{self.title} at {self.start_time} on {self.date}"

@@ -11,6 +11,10 @@
     <p>
         This meeting has been scheduled on {{meeting.date}}, at {{meeting.start_time}} in <strong>{{meeting.room}}</strong>.
     </p>
+    <h2>Meeting Summary</h2>
+    <p>
+        {{meeting.detail}}
+    </p>
     <form method="get" action="{% url 'home' %}">
         <button type="submit">BACK</button>
     </form>
