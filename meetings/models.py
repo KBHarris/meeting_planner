@@ -11,6 +11,8 @@ class Room(models.Model):
     def __str__(self):
         return f"{self.name}: Room {self.room_number} on Floor {self.floor_number}"
 
+    objects = models.Manager()
+
 class Meeting(models.Model):
     title = models.CharField(max_length=200)
     date = models.DateField()
@@ -21,7 +23,7 @@ class Meeting(models.Model):
     def __str__(self):
         return f"{self.title} at {self.start_time} on {self.date}"
     
- 
+    objects = models.Manager()
 
 
 
