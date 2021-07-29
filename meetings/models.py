@@ -20,6 +20,8 @@ class Meeting(models.Model):
 
     def __str__(self):
         return f"{self.title} at {self.start_time} on {self.date}"
+    
+ 
 
 
 
